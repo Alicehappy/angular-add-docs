@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
+import { NgbModal, ModalDismissReasons, NgbModalOptions } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-check-pwd',
@@ -7,12 +7,23 @@ import { NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./check-pwd.component.css']
 })
 export class CheckPwdComponent  {
+  title = 'ng-bootstrap-modal-demo';
   closeResult: string;
+  //@Input() title = `Input Value`;  // This is the working experimented code
+  modalOptions: NgbModalOptions;
 
-  constructor(private modalService: NgbModal) { }
 
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result
+  constructor(
+    private modalService: NgbModal
+  ){
+    this.modalOptions = {
+      backdrop: 'static',
+      ariaLabelledBy: 'modal-basic-title',
+    }
+  }
+
+  open(content) {   
+    this.modalService.open(content, this.modalOptions).result
     .then( (result) => {
       this.closeResult = `Close with: ${result}`;
     }, (reason) => {
@@ -31,3 +42,4 @@ export class CheckPwdComponent  {
   }
  
 }
+

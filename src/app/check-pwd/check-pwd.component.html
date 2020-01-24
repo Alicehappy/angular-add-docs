@@ -1,9 +1,9 @@
 <hr>
 <p>check-pwd works!</p>
 
-<ng-template #content let-modal>
+<ng-template #changePwdModal let-modal>
     <div class="modal-header">
-        <h4 class="modal-title">Change Password</h4>
+        <h4 class="modal-title">Change Password {{title}}</h4>
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
         </button>
@@ -11,11 +11,12 @@
     <div class="modal-body">
         <form>
             <div class="form-group">
-                <label for="dateOfBirth">Date of birth</label>
-                <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-                </div>
+                <label for="newPassword">New Password</label>
+                <input id="newPassword" class="form-control" name="newpwd">
+            </div>
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input id="confirmPassword" class="form-control" name="confpwd">
             </div>
         </form>
     </div>
@@ -24,6 +25,6 @@
     </div>
 </ng-template>
 
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)"> Check Pwd Directive Demo</button>
+<button class="btn btn-lg btn-outline-primary" (click)="open(changePwdModal)"> Check Pwd Directive Demo</button>
 
 <hr>

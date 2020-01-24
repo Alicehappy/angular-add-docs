@@ -8,6 +8,7 @@ import { HighlightDirective } from './highlight.directive';
 import { CheckPwdComponent } from './check-pwd/check-pwd.component';
 import { CheckPwdDirective } from './check-pwd.directive';
 import { AddDocsComponent } from './add-docs/add-docs.component';
+import { CheckPwdContentComponent, CheckPwdContentCompComponent } from './check-pwd-content/check-pwd-content.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,9 @@ import { AddDocsComponent } from './add-docs/add-docs.component';
     HighlightDirective,
     CheckPwdComponent,
     CheckPwdDirective,
-    AddDocsComponent
+    AddDocsComponent,
+    CheckPwdContentComponent,
+    CheckPwdContentCompComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +26,7 @@ import { AddDocsComponent } from './add-docs/add-docs.component';
     NgbModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CheckPwdContentCompComponent]
 })
 export class AppModule { }
