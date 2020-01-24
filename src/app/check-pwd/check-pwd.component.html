@@ -9,16 +9,7 @@
         </button>
     </div>
     <div class="modal-body">
-        <form>
-            <div class="form-group">
-                <label for="newPassword">New Password</label>
-                <input id="newPassword" class="form-control" name="newpwd">
-            </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirm Password</label>
-                <input id="confirmPassword" class="form-control" name="confpwd">
-            </div>
-        </form>
+        <app-change-pwd-directive></app-change-pwd-directive>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>

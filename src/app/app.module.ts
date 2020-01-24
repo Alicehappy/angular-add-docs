@@ -9,6 +9,7 @@ import { CheckPwdComponent } from './check-pwd/check-pwd.component';
 import { CheckPwdDirective } from './check-pwd.directive';
 import { AddDocsComponent } from './add-docs/add-docs.component';
 import { CheckPwdContentComponent, CheckPwdContentCompComponent } from './check-pwd-content/check-pwd-content.component';
+import { ChangePwdDirectiveComponent } from './change-pwd-directive/change-pwd-directive.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CheckPwdContentComponent, CheckPwdContentCompComponent } from './check-
     CheckPwdDirective,
     AddDocsComponent,
     CheckPwdContentComponent,
-    CheckPwdContentCompComponent
+    CheckPwdContentCompComponent,
+    ChangePwdDirectiveComponent
   ],
   imports: [
     BrowserModule,
