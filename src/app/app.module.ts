@@ -27,6 +27,6 @@ import { CheckPwdContentComponent, CheckPwdContentCompComponent } from './check-
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [CheckPwdContentCompComponent]
+  entryComponents: [CheckPwdContentComponent]
 })
 export class AppModule { }
