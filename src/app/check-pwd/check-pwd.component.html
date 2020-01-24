@@ -9,15 +9,7 @@
         </button>
     </div>
     <div class="modal-body">
-        <form>
-            <div class="form-group">
-                <label for="dateOfBirth">Date of birth</label>
-                <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
-                </div>
-            </div>
-        </form>
+        <app-change-pwd-directive></app-change-pwd-directive>
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
